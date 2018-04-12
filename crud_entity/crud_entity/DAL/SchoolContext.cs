@@ -17,6 +17,7 @@ namespace crud_entity.DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            // Evita que las tablas que se crearán con los modelos se popúlaricen (en vez de qeu se llame Students, se llamará Student)
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
